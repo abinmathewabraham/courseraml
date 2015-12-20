@@ -1,4 +1,5 @@
-# This script patches exersice library for submission sending.
+# This script patches exercise library for submission sending.
+# Run this file from the exercise directory
 import os
 
 # First find all specified files in folders.
@@ -49,4 +50,6 @@ def replace_string_in_all_files(filename, old_string, new_string):
         os.remove(f)
         os.rename(f + "_new", f)
 
-main()
+
+if __name__ == '__main__':
+    main()
