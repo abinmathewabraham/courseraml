@@ -28,15 +28,21 @@ def main():
 
 
 def find_occurences(filename, string_to_find):
+    was_file_found = False
     rootdir = os.getcwd()
 
     list_to_store = []
     for subdir, dirs, files in os.walk(rootdir):
         for file_ in files:
             if file_ == filename:
+                was_file_found = True
                 print(filename + " found.")
                 filepath = os.path.join(subdir, file_)
                 list_to_store.append(filepath)
+
+    if not was_file_found:
+        print "ERROR!! The file (%s) was not found. Please make sure you are running this script from the correct directory." % filename
+
     return list_to_store
 
 
