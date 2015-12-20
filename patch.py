@@ -3,7 +3,6 @@
 import os
 
 # First find all specified files in folders.
-
 # Walk through folders
 
 
@@ -51,5 +50,5 @@ def replace_string_in_all_files(filename, old_string, new_string):
         os.rename(f + "_new", f)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
