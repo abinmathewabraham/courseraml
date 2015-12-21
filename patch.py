@@ -36,7 +36,7 @@ def find_occurences(filename, string_to_find):
         for file_ in files:
             if file_ == filename:
                 was_file_found = True
-                print(filename + " found.")
+                print filename + " found."
                 filepath = os.path.join(subdir, file_)
                 list_to_store.append(filepath)
 
